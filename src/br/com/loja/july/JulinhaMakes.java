@@ -3,16 +3,17 @@ package br.com.loja.july;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JulinhaMakes {
+public class JulinhaMakes implements JulinhaMakesInterface{
 
 	private static List<Funcionario> funcionarios = new ArrayList<>();
 	
-	
+	@Override
 	public void Contratar(Funcionario f) {
 		funcionarios.add(f);
 		
 	}
 	
+	@Override
 	public void Demitir(Funcionario f) {
 		if(funcionarios.size() >1) {
 			System.out.println("Voce não tem funcionarios");
@@ -21,11 +22,12 @@ public class JulinhaMakes {
 		}
 	}
 	
-	
+	@Override
 	public void aumentarSal(Funcionario f, Double aumento) {
 		f.setSalario(f.getSalario() + aumento);
 	}
 	
+	@Override
 	public void diminuirSal(Funcionario f, Double reducao) {
 		if(reducao < 1) {
 			System.out.println("Reducao de salario invalida !!");
@@ -34,6 +36,7 @@ public class JulinhaMakes {
 		}
 	}
 	
+	@Override
 	public void todosFuncionarios() {
 		if(funcionarios.size() < 1) {
 			System.out.println("Não há funcionarios na lista");
