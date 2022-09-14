@@ -38,9 +38,9 @@ public class JulinhaMakes {
 		if(funcionarios.size() < 1) {
 			System.out.println("Não há funcionarios na lista");
 		}else {
-			for(Funcionario x : funcionarios) {
-				System.out.println("Nome: "+x.getNome()+";	ID: "+x.getID());
-			}
+			funcionarios.forEach(fun ->{
+				System.out.println("Nome: "+fun.getNome()+"; 	ID:"+fun.getID());
+			});
 		}
 	}
 	
