@@ -1,16 +1,20 @@
 package br.com.loja.july;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 
 public class JulinhaMakes implements JulinhaMakesInterface{
 
 	private static List<Funcionario> funcionarios = new ArrayList<>();
+	private Map<Integer, Funcionario> idFuncionario = new HashMap<>();
 	
 	@Override
 	public void Contratar(Funcionario f) {
 		funcionarios.add(f);
-		
+		idFuncionario.put(f.getID(), f);
 	}
 	
 	@Override
@@ -45,6 +49,15 @@ public class JulinhaMakes implements JulinhaMakesInterface{
 				System.out.println("Nome: "+fun.getNome()+"; 	ID:"+fun.getID());
 			});
 		}
+	}
+	
+	
+	public Funcionario buscaPorId(int i) {
+		if(!idFuncionario.containsKey(i)) 
+			throw new NoSuchElementException();
+			return idFuncionario.get(i);
+		
+		
 	}
 	
 }

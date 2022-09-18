@@ -7,13 +7,11 @@ public class Funcionario extends Pessoa{
 	private Double salario;
 	private int id;
 	
-	public Funcionario() {
-		Random gerador = new Random();
-		
-		for (int i = 0; i < 1; i++) {
-			setID(gerador.nextInt(9999));
-         }
-	}
+	/*
+	 * public Funcionario() { Random gerador = new Random();
+	 * 
+	 * for (int i = 0; i < 1; i++) { setID(gerador.nextInt(9999)); } }
+	 */
 	
 	public Double getSalario() {
 		return salario;
