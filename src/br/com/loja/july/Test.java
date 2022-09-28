@@ -19,9 +19,8 @@ public class Test {
 		j1.diminuirSal(v2, 100.00);
 		j1.todosFuncionarios();
 		
-		Funcionario funcionario = j1.buscaPorId(1243);
 		
-		System.out.println(funcionario);
+		
 		
 		
 		c1.comprar(200.00); 

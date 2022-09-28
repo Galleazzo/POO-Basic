@@ -40,6 +40,10 @@ public class JulinhaMakes implements JulinhaMakesInterface{
 		}
 	}
 	
+	public List<Funcionario> getFuncionarios(){
+		return JulinhaMakes.funcionarios;
+	}
+	
 	@Override
 	public void todosFuncionarios() {
 		if(funcionarios.size() < 1) {
@@ -52,12 +56,5 @@ public class JulinhaMakes implements JulinhaMakesInterface{
 	}
 	
 	
-	public Funcionario buscaPorId(int i) {
-		if(!idFuncionario.containsKey(i)) 
-			throw new NoSuchElementException();
-			return idFuncionario.get(i);
-		
-		
-	}
 	
 }
